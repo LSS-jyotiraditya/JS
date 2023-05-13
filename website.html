@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    h1 {text-align: center;}
+* {box-sizing: border-box}
+
+body, html {
+  height: 100%;
+  margin:  0;
+  font-family: Arial;
+}
+
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#Home {background-color: red;}
+#Community {background-color: green;}
+#Contact {background-color: blue;}
+#About {background-color: orange;}
+</style>
+</head>
+<body>
+
+<button class="tablink" onclick="openPage('Home', this, 'red')">Home</button>
+<button class="tablink" onclick="openPage('Community', this, 'green')" id="defaultOpen">Community</button>
+<button class="tablink" onclick="openPage('Contact', this, 'blue')">Contact</button>
+<button class="tablink" onclick="openPage('About', this, 'orange')">About</button>
+
+<div id="Home" class="tabcontent">
+  <h3>Home</h3>
+ <h1><img src="C:\Users\jyoti\Desktop\python\home.jpeg" alt="a picture of local articrafts"  ></h1>
+<p> The items shown on this slide are the intricate handicrafts made by our local artisans. You have probably purchased it at some point in your life, but do you think the craftsman received all the money? Unfortunately not, most of the money was profited by middlemen. 
+
+    <br><br>  According to The Economic Survey, 93% of the India's workforce include the self-employed. In contrast to the National minimum wage of  ₹4,576/month, local Craftsmen only earn an average of  ₹2,000/month and over 30% are in debt.
+The problems faced by them are less exposure to information and technology, proper funding, and marketing support.
+
+<br><br>  We cater solely to local craftsmen and helps advertise their goods.
+There is a direct line of trade between craftsmen and customers which enables craftsmen to receive 100% of their profits.
+We  enable craftsmen to sell to the urban market in a streamlined manner.
+We also allow customers to donate to craftsmen. Donations can be anonymous at the donor's discretion.
+
+</p>
+    
+</div>
+
+<div id="Community" class="tabcontent">
+  <h3>Community</h3>
+  <p>This page is for users to create their profiles , interact with each other.
+    
+  </p> 
+  <style>
+    body {font-family: Arial, Helvetica, sans-serif;}
+    * {box-sizing: border-box;}
+    
+  
+    input[type=text], input[type=password] {
+      width: 100%;
+      padding: 15px;
+      margin: 5px 0 22px 0;
+      display: inline-block;
+      border: none;
+      background: #f1f1f1;
+    }
+    
+    
+    input[type=text]:focus, input[type=password]:focus {
+      background-color: #ddd;
+      outline: none;
+    }
+    
+   
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      opacity: 0.9;
+    }
+    
+    button:hover {
+      opacity:1;
+    }
+    
+    
+    .cancelbtn {
+      padding: 14px 20px;
+      background-color: #f44336;
+    }
+    
+    
+    .cancelbtn, .signupbtn {
+      float: left;
+      width: 50%;
+    }
+    
+    
+    .container {
+      padding: 16px;
+    }
+    
+    
+    .modal {
+      display: none; 
+      position: fixed; 
+      z-index: 1; 
+      left: 0;
+      top: 0;
+      width: 100%; 
+      height: 100%;
+      overflow: auto; 
+      background-color: #474e5d;
+      padding-top: 50px;
+    }
+    
+    
+    .modal-content {
+      background-color: #fefefe;
+      margin: 5% auto 15% auto; 
+      border: 1px solid #888;
+      width: 80%;
+    }
+    
+  
+    hr {
+      border: 1px solid #f1f1f1;
+      margin-bottom: 25px;
+    }
+     
+
+    .close {
+      position: absolute;
+      right: 35px;
+      top: 15px;
+      font-size: 40px;
+      font-weight: bold;
+      color: #f1f1f1;
+    }
+    
+    .close:hover,
+    .close:focus {
+      color: #f44336;
+      cursor: pointer;
+    }
+    
+    
+    .clearfix::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+    
+    
+    @media screen and (max-width: 300px) {
+      .cancelbtn, .signupbtn {
+         width: 100%;
+      }
+    }
+    </style>
+    <body>
+    
+    <h2>Modal Signup Form</h2>
+    
+    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button>
+    
+    <div id="id01" class="modal">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <form class="modal-content" action="/action_page.php">
+        <div class="container">
+          <h1>Sign Up</h1>
+          <p>Please fill in this form to create an account.</p>
+          <hr>
+          <label for="email"><b>Email</b></label>
+          <input type="text" placeholder="Enter Email" name="email" required>
+    
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+    
+          <label for="psw-repeat"><b>Repeat Password</b></label>
+          <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+          
+          <label>
+            <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+          </label>
+    
+          <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+    
+          <div class="clearfix">
+            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+            <button type="submit" class="signupbtn">Sign Up</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    
+    <script>
+    
+    var modal = document.getElementById('id01');
+    
+    
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+    </script>
+    
+    </body>
+    <style>
+      body {font-family: Arial, Helvetica, sans-serif;}
+      * {box-sizing: border-box;}
+      
+    
+      .open-button {
+        background-color: #555;
+        color: white;
+        padding: 16px 20px;
+        border: none;
+        cursor: pointer;
+        opacity: 0.8;
+        position: fixed;
+        bottom: 23px;
+        right: 28px;
+        width: 280px;
+      }
+      
+      
+      .chat-popup {
+        display: none;
+        position: fixed;
+        bottom: 0;
+        right: 15px;
+        border: 3px solid #f1f1f1;
+        z-index: 9;
+      }
+      
+     
+      .form-container {
+        max-width: 300px;
+        padding: 10px;
+        background-color: white;
+      }
+      
+      
+      .form-container textarea {
+        width: 100%;
+        padding: 15px;
+        margin: 5px 0 22px 0;
+        border: none;
+        background: #f1f1f1;
+        resize: none;
+        min-height: 200px;
+      }
+      
+      
+      .form-container textarea:focus {
+        background-color: #ddd;
+        outline: none;
+      }
+      
+      
+      .form-container .btn {
+        background-color: #4CAF50;
+        color: white;
+        padding: 16px 20px;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        margin-bottom:10px;
+        opacity: 0.8;
+      }
+      
+      
+      .form-container .cancel {
+        background-color: red;
+      }
+      
+      
+      .form-container .btn:hover, .open-button:hover {
+        opacity: 1;
+      }
+      </style>
+      </head>
+      <body>
+      
+      <h2>Popup Chat Window</h2>
+      <p>Click on the button at the bottom of this page to open the chat form.</p>
+     <p> On the bottom right hand side of the page there's a chatbox for people all across the globe to interact with each other</p>
+      <button class="open-button" onclick="openForm()">Chat</button>
+      
+      <div class="chat-popup" id="myForm">
+        <form action="/action_page.php" class="form-container">
+          <h1>Chat</h1>
+      
+          <label for="msg"><b>Message</b></label>
+          <textarea placeholder="Type message.." name="msg" required></textarea>
+      
+          <button type="submit" class="btn">Send</button>
+          <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+      </div>
+      
+      <script>
+      function openForm() {
+        document.getElementById("myForm").style.display = "block";
+      }
+      
+      function closeForm() {
+        document.getElementById("myForm").style.display = "none";
+      }
+      </script>
+      
+      </body>
+</div>
+
+<div id="Contact" class="tabcontent">
+  <h3>Contact</h3>
+  <p>This page is created for users to get in touch with us incase they face any issues or problems regarding their account or purchases.
+    <br><br>
+    NextCraft is always avaialable to help their users and always have employees up and running throughout the day so that people do not face any issues.
+<br><br> Users who have any problems can contact us on this number<br>
+        ph : 08025905123
+
+        <br><br>
+        Users can also contact us on our email<br>
+        email : Nextcraft1111@outlook.com
+
+  </p>
+</div>
+
+<div id="About" class="tabcontent">
+  <h3>About</h3>
+  <p> Despite having over 200 million craftsmen, India only contributes 2% to the global handicrafts market worth over $663.9 Billion. We hope to improve these figures with an effective action plan.
+<br><br>
+ Our strengths include working at the grassroots level to build a loyal base and strong sense of community. However, there is a lack of access to technology for a major segment of our target base. We have several opportunities because the market we are aiming for is largely untapped. However, we face the threat of mass-manufactured low-cost products.
+  <br><br>
+  The idea is to basically increase india's contribution to the world's handicrafts industry while at the same time protect local craftsmen from getting ripped off.
+  NextCraft is not a typical amazon or flipkart like e-commerce site , it is just a platform connecting the buyers to the sellers .
+<br><br><br><br><br> <a href="sample prof.html"> click here to buy products(sample page)</a>
+</p>
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html> 
+
